@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>FORA 6 - คู่มือเซลล์</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700;800&display=swap');
+
+  /* Explicit @font-face for Thai (Sarabun) so HTML-to-PDF/PNG renderers
+     that don't process @import reliably still load the correct font. */
+  @font-face{
+    font-family:'Sarabun';
+    font-style:normal;
+    font-weight:400;
+    src:url('https://raw.githubusercontent.com/google/fonts/main/ofl/sarabun/Sarabun-Regular.ttf') format('truetype');
+  }
+  @font-face{
+    font-family:'Sarabun';
+    font-style:normal;
+    font-weight:600;
+    src:url('https://raw.githubusercontent.com/google/fonts/main/ofl/sarabun/Sarabun-SemiBold.ttf') format('truetype');
+  }
+  @font-face{
+    font-family:'Sarabun';
+    font-style:normal;
+    font-weight:700;
+    src:url('https://raw.githubusercontent.com/google/fonts/main/ofl/sarabun/Sarabun-Bold.ttf') format('truetype');
+  }
+
+  :root{
+    --blue:#153B75;
+    --blue2:#1E5AA8;
+    --orange:#F4901E;
+    --orange2:#FBB040;
+    --lightbg:#F4F7FC;
+    --green:#06C755;
+    --gray:#5B6472;
+    --line:#e3e8f0;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    font-family:'Sarabun','Leelawadee UI','Tahoma',sans-serif;
+    width:1240px;
+    background:#fff;
+    color:#22272E;
+    word-break:keep-all;
+    line-break:loose;
+    overflow-wrap:break-word;
+  }
+  p, h1, h2, h3, h4, td, .subtitle, .footer{
+    word-break:keep-all;
+    line-break:loose;
+    overflow-wrap:break-word;
+  }
+  .page{
+    width:1240px;
+    min-height:1754px;
+    background:#fff;
+    position:relative;
+    padding-bottom:40px;
+  }
+  .header{
+    background:linear-gradient(135deg, var(--blue) 0%, var(--blue2) 55%, var(--orange) 100%);
+    padding:46px 60px 40px 60px;
+    color:#fff;
+    position:relative;
+    overflow:hidden;
+  }
+  .header::after{
+    content:"";
+    position:absolute; right:-60px; top:-60px; width:300px; height:300px;
+    background:rgba(255,255,255,0.08); border-radius:50%;
+  }
+  .brand{
+    font-size:30px; font-weight:800; letter-spacing:1px;
+  }
+  .brand span{color:var(--orange2);}
+  .subbrand{font-size:16px; opacity:0.85; margin-top:2px; font-weight:500;}
+  .title{
+    font-size:42px; font-weight:800; margin-top:28px; line-height:1.3;
+  }
+  .subtitle{
+    font-size:19px; font-weight:500; margin-top:10px; opacity:0.92; max-width:900px; line-height:1.6;
+  }
+  .content{ padding:44px 60px 10px 60px; }
+  .flow{
+    position:relative;
+    padding-left:6px;
+  }
+  .step{
+    display:flex;
+    gap:28px;
+    position:relative;
+    padding-bottom:8px;
+  }
+  .step:not(:last-child)::before{
+    content:"";
+    position:absolute;
+    left:37px; top:76px; bottom:-8px;
+    width:4px;
+    background:repeating-linear-gradient(to bottom, var(--orange2) 0 10px, transparent 10px 18px);
+  }
+  .num{
+    flex:0 0 76px; height:76px; border-radius:50%;
+    background:linear-gradient(135deg,var(--blue2),var(--blue));
+    color:#fff; font-size:32px; font-weight:800;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 6px 14px rgba(30,90,168,0.35);
+    flex-shrink:0;
+  }
+  .step:nth-child(even) .num{ background:linear-gradient(135deg,var(--orange),var(--orange2)); box-shadow:0 6px 14px rgba(244,144,30,0.35);}
+  .card{
+    flex:1;
+    background:var(--lightbg);
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:22px 28px;
+    margin-bottom:26px;
+  }
+  .card h3{
+    font-size:23px; color:var(--blue); font-weight:700; margin-bottom:8px;
+    display:flex; align-items:center; gap:10px;
+  }
+  .card p{ font-size:17px; color:#3a424e; line-height:1.65; }
+  .card-flex{ display:flex; gap:20px; align-items:flex-start; }
+  .card-flex p{ flex:1; margin:0; }
+  .mini-qr{
+    flex:0 0 100px; text-align:center;
+  }
+  .mini-qr img{
+    width:100px; height:100px; border-radius:8px; border:1px solid var(--line); display:block;
+  }
+  .mini-qr span{
+    display:block; font-size:12px; color:var(--gray); margin-top:6px; line-height:1.4;
+  }
+  .card .tag{
+    display:inline-block; margin-top:10px; background:#fff; border:1.5px solid var(--orange);
+    color:var(--orange); font-weight:700; font-size:14.5px; padding:4px 14px; border-radius:20px;
+  }
+  .highlight-row{
+    display:flex; gap:22px; margin:38px 0 8px 0;
+  }
+  .hbox{
+    flex:1; border-radius:16px; padding:24px 22px; color:#fff; text-align:center;
+  }
+  .hbox.b1{ background:linear-gradient(135deg,var(--blue2),var(--blue)); }
+  .hbox.b2{ background:linear-gradient(135deg,var(--orange),#e07b0e); }
+  .hbox .big{ font-size:40px; font-weight:800; line-height:1; }
+  .hbox .lab{ font-size:16.5px; margin-top:8px; font-weight:600; opacity:0.95;}
+  .hbox .sub{ font-size:13.5px; margin-top:6px; opacity:0.85;}
+
+  .refbox{
+    margin-top:34px;
+    border:2.5px dashed var(--blue2);
+    border-radius:16px;
+    padding:22px 26px;
+    background:#F7FAFF;
+    display:flex; align-items:center; gap:22px;
+  }
+  .refbox .ricon{
+    width:56px;height:56px;border-radius:12px;background:var(--blue2);
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  }
+  .refbox b{color:var(--blue); font-size:19px;}
+  .refbox p{font-size:15.5px; color:#3a424e; margin-top:4px; line-height:1.6;}
+
+  .pricebar{
+    margin-top:40px;
+    background:#0F2A54;
+    border-radius:18px;
+    padding:30px 34px;
+    color:#fff;
+  }
+  .pricebar h4{
+    font-size:22px; font-weight:700; margin-bottom:18px;
+    display:flex; align-items:center; gap:10px;
+  }
+  .pricetable{ width:100%; border-collapse:collapse; }
+  .pricetable th{
+    text-align:left; font-size:14px; opacity:0.7; font-weight:600; padding-bottom:10px;
+    border-bottom:1px solid rgba(255,255,255,0.2);
+  }
+  .pricetable td{
+    padding:14px 6px; font-size:17px; border-bottom:1px solid rgba(255,255,255,0.12);
+  }
+  .pricetable td.name{ font-weight:700; }
+  .dot{width:12px;height:12px;border-radius:50%; display:inline-block; margin-right:10px;}
+  .dot.glu{background:#4FA6FF;}
+  .dot.uric{background:#FF8A3D;}
+  .dot.chol{background:#FFD24F;}
+  .pricetable td.price{ color:var(--orange2); font-weight:800; }
+
+  .footer{
+    margin-top:40px; padding:26px 60px 0 60px;
+    display:flex; justify-content:space-between; align-items:center;
+    color:var(--gray); font-size:14px;
+  }
+  .footer b{color:var(--blue);}
+
+  .qr-section{
+    margin-top:34px;
+    background:linear-gradient(135deg,#06C755,#04a746);
+    border-radius:22px;
+    padding:30px 36px;
+    display:flex;
+    align-items:center;
+    gap:32px;
+    color:#fff;
+  }
+  .qr-section .qrbox{
+    background:#fff; border-radius:16px; padding:14px; flex:0 0 170px;
+  }
+  .qr-section .qrbox img{ width:100%; display:block; border-radius:6px; }
+  .qr-section .qtext h3{ font-size:22px; font-weight:800; margin-bottom:8px;}
+  .qr-section .qtext p{ font-size:16px; line-height:1.65; opacity:0.95;}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header">
+    <div class="brand">FORA<span>®</span> ForaCare</div>
+    <div class="subbrand">เอกสารภายใน ใช้ภายในบริษัทเท่านั้น</div>
+    <div class="title">ขั้นตอนแจกเครื่อง FORA 6 Connect<br>และการรับค่าคอมมิชชั่น</div>
+    <div class="subtitle">แนวทางปฏิบัติสำหรับการแจกเครื่องตรวจน้ำตาล/ยูริก/ไขมัน พร้อมระบบอ้างอิงเพื่อรับค่าคอมมิชชั่นจากยอดซื้อครั้งแรกของลูกค้า</div>
+  </div>
+
+  <div class="content">
+    <div class="flow">
+
+      <div class="step">
+        <div class="num">1</div>
+        <div class="card">
+          <h3>คัดเลือกลูกค้าเป้าหมาย</h3>
+          <p>มองหาลูกค้าที่มีแนวโน้มสนใจดูแลสุขภาพ เช่น กลุ่มเสี่ยงเบาหวาน เสี่ยงโรคเกาท์ หรือไขมันในเลือดสูง ที่น่าจะได้ประโยชน์จากการมีเครื่องตรวจไว้ใช้เองที่บ้าน</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="num">2</div>
+        <div class="card">
+          <h3>แอดไลน์ @foracare แจ้งข้อมูลกับแอดมิน</h3>
+          <div class="card-flex">
+            <div class="mini-qr">
+              <img src="data:image/png;base64,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" alt="QR แอดไลน์ @foracare">
+              <span>สแกนเพื่อแอดไลน์ @foracare</span>
+            </div>
+            <p>แอดไลน์ <b>@foracare</b> แล้วแจ้งชื่อสกุลพนักงาน หน่วยงานที่สังกัด และจำนวนเครื่อง FORA 6 ที่ต้องการแจกให้กับลูกค้าเป้าหมาย เช่น <i>"สมหญิง จริงใจ ฝ่ายบุคคล จำนวน 3 เครื่อง"</i> จากนั้นแอดมินจะนัดหมายเพื่อรับเครื่องต่อไป</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="num">3</div>
+        <div class="card">
+          <h3>แจกเครื่อง FORA 6 Connect ฟรี</h3>
+          <p>มอบเครื่องตรวจ FORA 6 Connect ให้ลูกค้าโดยไม่มีค่าใช้จ่าย พร้อมแนบแถบทดสอบตัวอย่าง (glucose / uric acid / cholesterol) จำนวนเล็กน้อยให้ลองใช้งานจริง</p>
+          <span class="tag">ไม่มีค่าใช้จ่ายสำหรับลูกค้า</span>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="num">4</div>
+        <div class="card">
+          <h3>แจ้ง Reference Code ให้ลูกค้าเก็บไว้</h3>
+          <p>แจ้งรหัสอ้างอิง (Reference Code) รูปแบบ <b>Fora6_XXXX</b> ให้ลูกค้าจดหรือเก็บไว้ เพื่อใช้แจ้งตอนสั่งซื้อแถบตรวจเพิ่มในอนาคต</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="num">5</div>
+        <div class="card">
+          <h3>ลูกค้าแอดไลน์สั่งซื้อแถบตรวจเพิ่ม</h3>
+          <p>ลูกค้าแอดไลน์ทางการ <b>@foracare</b> และแจ้ง Reference Code เช่น <b>Fora6_XXXX</b> พร้อมแจ้งรายการแถบตรวจที่ต้องการสั่งซื้อ</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="num">6</div>
+        <div class="card">
+          <h3>ลูกค้าได้รับส่วนลดทันที</h3>
+          <p>คำสั่งซื้อแรกที่แจ้ง Reference Code จะได้รับส่วนลด 100 บาท เมื่อมียอดซื้อขั้นต่ำ 500 บาทขึ้นไป</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="num">7</div>
+        <div class="card">
+          <h3>พนักงานรับค่าคอมมิชชั่นอัตโนมัติ</h3>
+          <p>ระบบตรวจสอบ Reference Code จากคำสั่งซื้อแรกของลูกค้า และคำนวณค่าคอมมิชชั่นให้พนักงานเจ้าของรหัสโดยอัตโนมัติ โดยทำจ่ายพร้อมเงินเดือนในเดือนถัดจากที่ลูกค้ามีการสั่งซื้อ</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="highlight-row">
+      <div class="hbox b1">
+        <div class="big">฿100</div>
+        <div class="lab">ส่วนลดลูกค้า</div>
+        <div class="sub">คำสั่งซื้อแรก ขั้นต่ำ 500 บาท</div>
+      </div>
+      <div class="hbox b2">
+        <div class="big">10%</div>
+        <div class="lab">ค่าคอมมิชชั่นเซลล์</div>
+        <div class="sub">จากยอดซื้อครั้งแรกของลูกค้า</div>
+      </div>
+    </div>
+
+    <div class="refbox">
+      <div class="ricon">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M4 4h16v16H4z" stroke="#fff" stroke-width="1.6" fill="none"/><path d="M8 9h8M8 13h5" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </div>
+      <div>
+        <b>อย่าลืม!</b>
+        <p>ทุกครั้งที่แจกเครื่อง ให้พนักงานแจ้ง Reference Code รูปแบบ <b>Fora6_XXXX</b> แก่ลูกค้าเสมอ — หากลูกค้าไม่แจ้งรหัสตอนสั่งซื้อ ระบบจะไม่สามารถคำนวณค่าคอมมิชชั่นให้พนักงานได้</p>
+      </div>
+    </div>
+
+    <div class="qr-section">
+      <div class="qrbox">
+        <img src="data:image/png;base64,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" alt="QR วิธีสั่งซื้อแถบตรวจเพิ่ม">
+      </div>
+      <div class="qtext">
+        <h3>ให้ลูกค้าสแกน QR นี้</h3>
+        <p>แจ้งให้ลูกค้าสแกน QR นี้ เพื่อดูวิธีการสั่งซื้อแถบตรวจเพิ่มด้วยตนเอง (แอดไลน์ + แจ้ง Reference Code + ราคาแถบตรวจ)</p>
+      </div>
+    </div>
+
+    <div class="pricebar">
+      <h4>ราคาแถบตรวจ (แจ้งลูกค้าได้ทันที)</h4>
+      <table class="pricetable">
+        <tr><th>รายการ</th><th>ราคา/กล่อง</th><th>จำนวน/กล่อง</th></tr>
+        <tr>
+          <td class="name"><span class="dot glu"></span>Glucose (น้ำตาล)</td>
+          <td class="price">380 บาท</td>
+          <td>25 แผ่น/กล่อง</td>
+        </tr>
+        <tr>
+          <td class="name"><span class="dot uric"></span>Uric Acid (กรดยูริก)</td>
+          <td class="price">540 บาท</td>
+          <td>10 แผ่น/กล่อง</td>
+        </tr>
+        <tr>
+          <td class="name"><span class="dot chol"></span>Cholesterol (ไขมัน)</td>
+          <td class="price">970 บาท</td>
+          <td>10 แผ่น/กล่อง</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="footer">
+      <div>ติดต่อสอบถามเพิ่มเติม: LINE OA <b>@foracare</b></div>
+      <div>โปรโมชั่นส่วนลดแรกเข้า สิ้นสุด <b>31 ต.ค. 2569 (2026)</b></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
