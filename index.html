@@ -71,6 +71,15 @@
     position:absolute; right:-60px; top:-60px; width:300px; height:300px;
     background:rgba(255,255,255,0.08); border-radius:50%;
   }
+  .header-qr{
+    position:absolute; top:36px; right:44px; z-index:2;
+    background:#fff; border-radius:12px; padding:10px; text-align:center;
+    width:112px;
+  }
+  .header-qr img{ width:92px; height:92px; display:block; border-radius:4px; }
+  .header-qr span{
+    display:block; font-size:10.5px; color:#153B75; font-weight:700; margin-top:5px; line-height:1.3;
+  }
   .brand{
     font-size:30px; font-weight:800; letter-spacing:1px;
   }
@@ -219,6 +228,10 @@
 <div class="page">
 
   <div class="header">
+    <div class="header-qr">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAhwAAAIcCAIAAAAynOArAAAL3ElEQVR4nO3cQW7jSBBFwdHA97+yZ98LT6H9kMqiItYNkxKpfqjNf31/f/8DAIV/330DADyHqACQERUAMqICQEZUAMiICgAZUQEgIyoAZEQFgIyoAJARFQAyogJARlQAyIgKABlRASAjKgBkRAWAjKgAkBEVADKiAkBGVADIiAoAGVEBICMqAGREBYCMqACQERUAMqICQEZUAMiICgAZUQEgIyoAZEQFgIyoAJARFQAyogJARlQAyIgKABlRASAjKgBkRAWAjKgAkBEVADKiAkBGVADIiAoAGVEBIPP17hv40+v1evctvM339/f//ptt38/kPZ9c60Yn30/1PVff4eS1Tmz7XUza9rtwUgEgIyoAZEQFgIyoAJARFQAyogJARlQAyIgKABlRASAjKgBkRAWAzLrtrxPbtm5O3Lh/dXLPT91cmnxek7te1d+5cUPsk//fmOSkAkBGVADIiAoAGVEBICMqAGREBYCMqACQERUAMqICQEZUAMiICgCZK7e/Tkxu5mzbFNq2p1Q9ixv3uE5M/p3Jz3Xixt9OZdtnrzipAJARFQAyogJARlQAyIgKABlRASAjKgBkRAWAjKgAkBEVADKiAkDmsdtfn2zbvtOJG7e2qmtNbkBN7qedXGvb98PvOakAkBEVADKiAkBGVADIiAoAGVEBICMqAGREBYCMqACQERUAMqICQMb2F78yud00uQ92497U5LOorrVtg47fc1IBICMqAGREBYCMqACQERUAMqICQEZUAMiICgAZUQEgIyoAZEQFgMxjt79u3G6qTO4yTf6dEzfuTd14P5PPa9K2+7mRkwoAGVEBICMqAGREBYCMqACQERUAMqICQEZUAMiICgAZUQEgIyoAZK7c/tq2lTRp2x6Xv+PvbPg7Jz75/41JTioAZEQFgIyoAJARFQAyogJARlQAyIgKABlRASAjKgBkRAWAjKgAkHlVuzrMqPaLnrqntO19tpH1e9ueKT9zUgEgIyoAZEQFgIyoAJARFQAyogJARlQAyIgKABlRASAjKgBkRAWAzNe7b+BPk9tW26518ncmP1dl2z1v+35OTO56Tb7P1bOY3EabdOPnclIBICMqAGREBYCMqACQERUAMqICQEZUAMiICgAZUQEgIyoAZEQFgMxr227Mtj2u6lqVyd2qyb2pyrb3+cS2fadt22jb3sNtO2zbOKkAkBEVADKiAkBGVADIiAoAGVEBICMqAGREBYCMqACQERUAMqICQObr3TfwN6o9nGofbNum0LadqMkdtsn72bbLVN3z5PPaZttnv/E9dFIBICMqAGREBYCMqACQERUAMqICQEZUAMiICgAZUQEgIyoAZEQFgMy67a9tu1WVp24KTT6v6lrbdsa2vRuVbc+r8tTtuIqTCgAZUQEgIyoAZEQFgIyoAJARFQAyogJARlQAyIgKABlRASAjKgBkXtv2Z7bt/JywBfQ81Xs4uX+17T2c/A63XWvbPU9yUgEgIyoAZEQFgIyoAJARFQAyogJARlQAyIgKABlRASAjKgBkRAWAzLrtr222bQpNsoP0e0/9fibf1clneuNvcBsnFQAyogJARlQAyIgKABlRASAjKgBkRAWAjKgAkBEVADKiAkBGVADIfL37Bv7Gth2kT97I2rZNtO17nnTjrteJp77zJ5+rep8nOakAkBEVADKiAkBGVADIiAoAGVEBICMqAGREBYCMqACQERUAMqICQObK7a9tWzcntu2MVSa3ibZ99hu32rZto01ea/Jd3fY9T3JSASAjKgBkRAWAjKgAkBEVADKiAkBGVADIiAoAGVEBICMqAGREBYDM68YdrRPbdn5OTD6LbZtC23aQnroBVV1r2/M6se33Xtn2f7iTCgAZUQEgIyoAZEQFgIyoAJARFQAyogJARlQAyIgKABlRASAjKgBkvt59A3+a3Ow6sW3X68YNqEnbNruqa5248Zlu2yKrPvu238UkJxUAMqICQEZUAMiICgAZUQEgIyoAZEQFgIyoAJARFQAyogJARlQAyKzb/qrcuF9UXevEjXtKkzzT3/+dyrY9rm3bg9t+X04qAGREBYCMqACQERUAMqICQEZUAMiICgAZUQEgIyoAZEQFgIyoAJB57PbXiRu3kqq9qepa274f9njqM/U+/8xJBYCMqACQERUAMqICQEZUAMiICgAZUQEgIyoAZEQFgIyoAJARFQAyH739NanaC5rc2prcGftk27bjJnerPvkde+pnd1IBICMqAGREBYCMqACQERUAMqICQEZUAMiICgAZUQEgIyoAZEQFgMy67a+nbhxtu9a2fbDJHaTJd+PGjbXJ+3nqzlh1rcnvp+KkAkBGVADIiAoAGVEBICMqAGREBYCMqACQERUAMqICQEZUAMiICgCZddtfk5s5n7wFtG0frPo7N97zpBs/+7YtssntuG0bhiecVADIiAoAGVEBICMqAGREBYCMqACQERUAMqICQEZUAMiICgAZUQEgs27768SN+0Xb9nmeust04sY9rurvbPtdbNvRqmx7xyY5qQCQERUAMqICQEZUAMiICgAZUQEgIyoAZEQFgIyoAJARFQAyogJAZt3217YdpMlr3XjPkyZ3oiafaeWTv58bN+hObPsNnnBSASAjKgBkRAWAjKgAkBEVADKiAkBGVADIiAoAGVEBICMqAGREBYDMa3LH5sTkRta2z37ixo2jbftF2zbWTnzy5tu2ra3JZ3rj/1FOKgBkRAWAjKgAkBEVADKiAkBGVADIiAoAGVEBICMqAGREBYCMqACQuXL7a9K2naht20SVbZ/9xLb7OTG5rTdp2z1v+39jkpMKABlRASAjKgBkRAWAjKgAkBEVADKiAkBGVADIiAoAGVEBICMqAGS+3n0Df+OT951u3Di60eRG1o1bbSdu/FzVM33qxtoJJxUAMqICQEZUAMiICgAZUQEgIyoAZEQFgIyoAJARFQAyogJARlQAyLy2bTfduJU0ueEz+dlv3Fjb9v588nd4427VNtv+fz7hpAJARlQAyIgKABlRASAjKgBkRAWAjKgAkBEVADKiAkBGVADIiAoAmXXbX/zsxr0yfrbtN2g/7WdP/ewVJxUAMqICQEZUAMiICgAZUQEgIyoAZEQFgIyoAJARFQAyogJARlQAyHy9+wb+9Ml7Uyc7P9s2u7btMp3Y9h1WG1DV37lxb2rbjta2ZzrJSQWAjKgAkBEVADKiAkBGVADIiAoAGVEBICMqAGREBYCMqACQERUAMuu2v05s27o5sW2Pa9s20VM33ybf1epaNz5Tu157OKkAkBEVADKiAkBGVADIiAoAGVEBICMqAGREBYCMqACQERUAMqICQObK7a8Tn7w7dOLGe65Mbjdt23e6cddr2/tTPa8bd71OOKkAkBEVADKiAkBGVADIiAoAGVEBICMqAGREBYCMqACQERUAMqICQOax21/8rNqAqvaLbtzIOjH5/ZzYtus1eT/bnkVl24aYkwoAGVEBICMqAGREBYCMqACQERUAMqICQEZUAMiICgAZUQEgIyoAZGx/XWbbdtPkZld1rW33fKL6XDbWfvbU3bNJTioAZEQFgIyoAJARFQAyogJARlQAyIgKABlRASAjKgBkRAWAjKgAkHns9tfkftGkbVtAk9/z5FbStk2qyiffz+R23Iltv+WKkwoAGVEBICMqAGREBYCMqACQERUAMqICQEZUAMiICgAZUQEgIyoAZK7c/nrqZs6kbZtLk6rPPrkBNXnP276fao9rctdr23c4yUkFgIyoAJARFQAyogJARlQAyIgKABlRASAjKgBkRAWAjKgAkBEVADKvyQ0oAJ7NSQWAjKgAkBEVADKiAkBGVADIiAoAGVEBICMqAGREBYCMqACQERUAMqICQEZUAMiICgAZUQEgIyoAZEQFgIyoAJARFQAyogJARlQAyIgKABlRASAjKgBkRAWAjKgAkBEVADKiAkBGVADIiAoAGVEBICMqAGREBYCMqACQERUAMqICQEZUAMiICgAZUQEgIyoAZEQFgIyoAJARFQAyogJARlQAyIgKABlRASDzHyhj62Cp9piXAAAAAElFTkSuQmCC" alt="QR ทำความรู้จัก FORA 6 Connect">
+      <span>ทำความรู้จัก FORA 6 Connect</span>
+    </div>
     <div class="brand">FORA<span>®</span> ForaCare</div>
     <div class="subbrand">เอกสารภายใน ใช้ภายในบริษัทเท่านั้น</div>
     <div class="title">ขั้นตอนแจกเครื่อง FORA 6 Connect<br>และการรับค่าคอมมิชชั่น</div>
@@ -254,7 +267,7 @@
         <div class="num">3</div>
         <div class="card">
           <h3>แจกเครื่อง FORA 6 Connect ฟรี</h3>
-          <p>มอบเครื่องตรวจ FORA 6 Connect ให้ลูกค้าโดยไม่มีค่าใช้จ่าย พร้อมแนบแถบทดสอบตัวอย่าง (glucose / uric acid / cholesterol) จำนวนเล็กน้อยให้ลองใช้งานจริง</p>
+          <p>มอบเครื่องตรวจ FORA 6 Connect ให้ลูกค้าโดยไม่มีค่าใช้จ่าย พร้อมแนบแถบทดสอบตัวอย่าง (Blood Glucose / Uric Acid / Total Cholesterol) จำนวนเล็กน้อยให้ลองใช้งานจริง</p>
           <span class="tag">ไม่มีค่าใช้จ่ายสำหรับลูกค้า</span>
         </div>
       </div>
@@ -287,7 +300,7 @@
         <div class="num">7</div>
         <div class="card">
           <h3>พนักงานรับค่าคอมมิชชั่นอัตโนมัติ</h3>
-          <p>ระบบตรวจสอบ Reference Code จากคำสั่งซื้อแรกของลูกค้า และคำนวณค่าคอมมิชชั่นให้พนักงานเจ้าของรหัสโดยอัตโนมัติ โดยทำจ่ายพร้อมเงินเดือนในเดือนถัดจากที่ลูกค้ามีการสั่งซื้อ</p>
+          <p>ระบบตรวจสอบ Reference Code จากคำสั่งซื้อแรกของลูกค้า และคำนวณค่าคอมมิชชั่นให้พนักงานเจ้าของรหัสโดยอัตโนมัติ เมื่อสิ้นสุดจัดรายการ โดยแอดมินจะทัก เพื่อขอเลขที่บัญชี ในการโอนเงินค่าคอมมิชชั่น (ระยะเวลาภายใน 2 สัปดาห์ หลังหมดโปรโมชั่น 31 ตุลาคม 2026)</p>
         </div>
       </div>
 
