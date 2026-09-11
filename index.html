@@ -151,21 +151,12 @@
   }
   .hbox{
     flex:1; border-radius:16px; padding:24px 22px; color:#fff; text-align:center;
-    display:flex; flex-direction:column; justify-content:center; align-items:center;
   }
   .hbox.b1{ background:linear-gradient(135deg,var(--blue2),var(--blue)); }
   .hbox.b2{ background:linear-gradient(135deg,var(--orange),#e07b0e); }
   .hbox .big{ font-size:40px; font-weight:800; line-height:1; }
   .hbox .lab{ font-size:16.5px; margin-top:8px; font-weight:600; opacity:0.95;}
   .hbox .sub{ font-size:13.5px; margin-top:6px; opacity:0.85;}
-  .hbox .tier-title{ font-size:16.5px; font-weight:700; margin-bottom:14px; }
-  .tier-list{ display:flex; flex-direction:column; gap:9px; width:100%; }
-  .tier-row{
-    display:flex; align-items:center; gap:8px; flex-wrap:wrap;
-    background:rgba(255,255,255,0.14); border-radius:9px; padding:10px 16px;
-    text-align:left; font-size:14.5px;
-  }
-  .tier-row .num{ font-size:26px; font-weight:800; line-height:1; margin:0 2px; }
 
   .refbox{
     margin-top:34px;
@@ -276,7 +267,7 @@
         <div class="num">3</div>
         <div class="card">
           <h3>แจกเครื่อง FORA 6 Connect ฟรี</h3>
-          <p>มอบเครื่องตรวจ FORA 6 Connect ให้ลูกค้าโดยไม่มีค่าใช้จ่าย</p>
+          <p>มอบเครื่องตรวจ FORA 6 Connect ให้ลูกค้าโดยไม่มีค่าใช้จ่าย พร้อมแนบแถบทดสอบตัวอย่าง (Blood Glucose / Uric Acid / Total Cholesterol) จำนวนเล็กน้อยให้ลองใช้งานจริง</p>
           <span class="tag">ไม่มีค่าใช้จ่ายสำหรับลูกค้า</span>
         </div>
       </div>
@@ -301,7 +292,7 @@
         <div class="num">6</div>
         <div class="card">
           <h3>ลูกค้าได้รับส่วนลดทันที</h3>
-          <p>คำสั่งซื้อแรกที่แจ้ง Reference Code จะได้รับส่วนลดตามที่แสดงด้านล่างนี้ เมื่อมียอดซื้อขั้นต่ำ 500 บาทขึ้นไป</p>
+          <p>คำสั่งซื้อแรกที่แจ้ง Reference Code จะได้รับส่วนลด 100 บาท เมื่อมียอดซื้อขั้นต่ำ 500 บาทขึ้นไป</p>
         </div>
       </div>
 
@@ -309,7 +300,7 @@
         <div class="num">7</div>
         <div class="card">
           <h3>พนักงานรับค่าคอมมิชชั่นอัตโนมัติ</h3>
-          <p>ระบบตรวจสอบ Reference Code จากคำสั่งซื้อแรกของลูกค้า และคำนวณค่าคอมมิชชั่นให้พนักงานเจ้าของรหัสโดยอัตโนมัติ เมื่อสิ้นสุดจัดรายการ โดยแอดมินจะทัก เพื่อขอเลขที่บัญชี ในการโอนเงินค่าคอมมิชชั่น (ตัดยอดขายทุกสิ้นเดือน และทำจ่ายค่าคอมภายใน 2 สัปดาห์หลังสิ้นเดือน)</p>
+          <p>ระบบตรวจสอบ Reference Code จากคำสั่งซื้อแรกของลูกค้า และคำนวณค่าคอมมิชชั่นให้พนักงานเจ้าของรหัสโดยอัตโนมัติ เมื่อสิ้นสุดจัดรายการ โดยแอดมินจะทัก เพื่อขอเลขที่บัญชี ในการโอนเงินค่าคอมมิชชั่น (ระยะเวลาภายใน 2 สัปดาห์ หลังหมดโปรโมชั่น 31 ตุลาคม 2026)</p>
         </div>
       </div>
 
@@ -317,17 +308,14 @@
 
     <div class="highlight-row">
       <div class="hbox b1">
-        <div class="tier-title">ส่วนลดลูกค้า (คำสั่งซื้อแรก)</div>
-        <div class="tier-list">
-          <div class="tier-row">ส่วนลด <span class="num">100</span> บาท สำหรับยอดสั่งซื้อขั้นต่ำ <span class="num">500</span> บาท</div>
-          <div class="tier-row">ส่วนลด <span class="num">220</span> บาท สำหรับยอดสั่งซื้อขั้นต่ำ <span class="num">1,000</span> บาท</div>
-          <div class="tier-row">ส่วนลด <span class="num">350</span> บาท สำหรับยอดสั่งซื้อขั้นต่ำ <span class="num">1,500</span> บาท</div>
-        </div>
+        <div class="big">฿100</div>
+        <div class="lab">ส่วนลดลูกค้า</div>
+        <div class="sub">คำสั่งซื้อแรก ขั้นต่ำ 500 บาท</div>
       </div>
       <div class="hbox b2">
         <div class="big">10%</div>
         <div class="lab">ค่าคอมมิชชั่นเซลล์</div>
-        <div class="sub">จากยอดซื้อครั้งแรกของลูกค้าหลังหักส่วนลดแล้ว</div>
+        <div class="sub">จากยอดซื้อครั้งแรกของลูกค้า</div>
       </div>
     </div>
 
@@ -375,7 +363,7 @@
 
     <div class="footer">
       <div>ติดต่อสอบถามเพิ่มเติม: LINE OA <b>@foracare</b></div>
-      <div>โปรโมชั่นส่วนลดแรกเข้า สิ้นสุด <b>31 ธ.ค. 2569 (2026)</b></div>
+      <div>โปรโมชั่นส่วนลดแรกเข้า สิ้นสุด <b>31 ต.ค. 2569 (2026)</b></div>
     </div>
   </div>
 </div>
