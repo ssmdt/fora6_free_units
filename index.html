@@ -1,9 +1,9 @@
-&lt;!DOCTYPE html&gt;
-&lt;html lang="th"&gt;
-&lt;head&gt;
-&lt;meta charset="UTF-8"&gt;
-&lt;title&gt;FORA 6 - คู่มือเซลล์&lt;/title&gt;
-&lt;style&gt;
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>FORA 6 - คู่มือเซลล์</title>
+<style>
   @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700;800&display=swap');
 
   /* Explicit @font-face for Thai (Sarabun) so HTML-to-PDF/PNG renderers
@@ -131,7 +131,7 @@
     display:flex; align-items:center; gap:10px;
   }
   .card p{ font-size:17px; color:#3a424e; line-height:1.65; }
-.card-flex{ display:flex; gap:20px; align-items:flex-start; }
+  .card-flex{ display:flex; gap:20px; align-items:flex-start; }
   .card-flex p{ flex:1; margin:0; }
   .mini-qr{
     flex:0 0 100px; text-align:center;
@@ -231,37 +231,153 @@
   .qr-section .qrbox img{ width:100%; display:block; border-radius:6px; }
   .qr-section .qtext h3{ font-size:22px; font-weight:800; margin-bottom:8px;}
   .qr-section .qtext p{ font-size:16px; line-height:1.65; opacity:0.95;}
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;div class="page"&gt;
+</style>
+</head>
+<body>
+<div class="page">
 
-  &lt;div class="header"&gt;
-    &lt;div class="header-qr"&gt;
-      &lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAhwAAAIcCAIAAAAynOArAAAL3ElEQVR4nO3cQW7jSBBFwdHA97+yZ98LT6H9kMqiItYNkxKpfqjNf31/f/8DAIV/330DADyHqACQERUAMqICQEZUAMiICgAZUQEgIyoAZEQFgIyoAJARFQAyogJARlQAyIgKABlRASAjKgBkRAWAjKgAkBEVADKiAkBGVADIiAoAGVEBICMqAGREBYCMqACQERUAMqICQEZUAMiICgAZUQEgIyoAZEQFgIyoAJARFQAyogJARlQAyIgKABlRASAjKgBkRAWAjKgAkBEVADKiAkBGVADIiAoAGVEBIPP17hv40+v1evctvM339/f//ptt38/kPZ9c60Yn30/1PVff4eS1Tmz7XUza9rtwUgEgIyoAZEQFgIyoAJARFQAyogJARlQAyIgKABlRASAjKgBkRAWAzLrtrxPbtm5O3Lh/dXLPT91cmnxek7te1d+5cUPsk//fmOSkAkBGVADIiAoAGVEBICMqAGREBYCMqACQERUAMqICQEZUAMiICgCZK7e/Tkxu5mzbFNq2p1Q9ixv3uE5M/p3Jz3Xixt9OZdtnrzipAJARFQAyogJARlQAyIgKABlRASAjKgBkRAWAjKgAkBEVADKiAkDmsdtfn2zbvtOJG7e2qmtNbkBN7qedXGvb98PvOakAkBEVADKiAkBGVADIiAoAGVEBICMqAGREBYCMqACQERUAMqICQMb2F78yud00uQ92497U5LOorrVtg47fc1IBICMqAGREBYCMqACQERUAMqICQEZUAMiICgAZUQEgIyoAZEQFgMxjt79u3G6qTO4yTf6dEzfuTd14P5PPa9K2+7mRkwoAGVEBICMqAGREBYCMqACQERUAMqICQEZUAMiICgAZUQEgIyoAZK7c/tq2lTRp2x6Xv+PvbPg7Jz75/41JTioAZEQFgIyoAJARFQAyogJARlQAyIgKABlRASAjKgBkRAWAjKgAkHlVuzrMqPaLnrqntO19tpH1e9ueKT9zUgEgIyoAZEQFgIyoAJARFQAyogJARlQAyIgKABlRASAjKgBkRAWAzNe7b+BPk9tW26518ncmP1dl2z1v+35OTO56Tb7P1bOY3EabdOPnclIBICMqAGREBYCMqACQERUAMqICQEZUAMiICgAZUQEgIyoAZEQFgMxr227Mtj2u6lqVyd2qyb2pyrb3+cS2fadt22jb3sNtO2zbOKkAkBEVADKiAkBGVADIiAoAGVEBICMqAGREBYCMqACQERUAMqICQObr3TfwN6o9nGofbNum0LadqMkdtsn72bbLVN3z5PPaZttnv/E9dFIBICMqAGREBYCMqACQERUAMqICQEZUAMiICgAZUQEgIyoAZEQFgMy67a9tu1WVp24KTT6v6lrbdsa2vRuVbc+r8tTtuIqTCgAZUQEgIyoAZEQFgIyoAJARFQAyogJARlQAyIgKABlRASAjKgBkXtv2Z7bt/JywBfQ81Xs4uX+17T2c/A63XWvbPU9yUgEgIyoAZEQFgIyoAJARFQAyogJARlQAyIgKABlRASAjKgBkRAWAzLrtr222bQpNsoP0e0/9fibf1clneuNvcBsnFQAyogJARlQAyIgKABlRASAjKgBkRAWAjKgAkBEVADKiAkBGVADIfL37Bv7Gth2kT97I2rZNtO17nnTjrteJp77zJ5+rep8nOakAkBEVADKiAkBGVADIiAoAGVEBICMqAGREBYCMqACQERUAMqICQObK7a9tWzcntu2MVSa3ibZ99hu32rZto01ea/Jd3fY9T3JSASAjKgBkRAWAjKgAkBEVADKiAkBGVADIiAoAGVEBICMqAGREBYDM68YdrRPbdn5OTD6LbZtC23aQnroBVV1r2/M6se33Xtn2f7iTCgAZUQEgIyoAZEQFgIyoAJARFQAyogJARlQAyIgKABlRASAjKgBkvt59A3+a3Ow6sW3X68YNqEnbNruqa5248Zlu2yKrPvu238UkJxUAMqICQEZUAMiICgAZUQEgIyoAZEQFgIyoAJARFQAyogJARlQAyKzb/qrcuF9UXevEjXtKkzzT3/+dyrY9rm3bg9t+X04qAGREBYCMqACQERUAMqICQEZUAMiICgAZUQEgIyoAZEQFgIyoAJB57PbXiRu3kqq9qepa274f9njqM/U+/8xJBYCMqACQERUAMqICQEZUAMiICgAZUQEgIyoAZEQFgIyoAJARFQAyH739NanaC5rc2prcGftk27bjJnerPvkde+pnd1IBICMqAGREBYCMqACQERUAMqICQEZUAMiICgAZUQEgIyoAZEQFgMy67a+nbhxtu9a2fbDJHaTJd+PGjbXJ+3nqzlh1rcnvp+KkAkBGVADIiAoAGVEBICMqAGREBYCMqACQERUAMqICQEZUAMiICgCZddtfk5s5n7wFtG0frPo7N97zpBs/+7YtssntuG0bhiecVADIiAoAGVEBICMqAGREBYCMqACQERUAMqICQEZUAMiICgAZUQEgs27768SN+0Xb9nmeust04sY9rurvbPtdbNvRqmx7xyY5qQCQERUAMqICQEZUAMiICgAZUQEgIyoAZEQFgIyoAJARFQAyogJAZt3217YdpMlr3XjPkyZ3oiafaeWTv58bN+hObPsNnnBSASAjKgBkRAWAjKgAkBEVADKiAkBGVADIiAoAGVEBICMqAGREBYDMa3LH5sTkRta2z37ixo2jbftF2zbWTnzy5tu2ra3JZ3rj/1FOKgBkRAWAjKgAkBEVADKiAkBGVADIiAoAGVEBICMqAGREBYCMqACQuXL7a9K2naht20SVbZ/9xLb7OTG5rTdp2z1v+39jkpMKABlRASAjKgBkRAWAjKgAkBEVADKiAkBGVADIiAoAGVEBICMqAGS+3n0Df+OT951u3Di60eRG1o1bbSdu/FzVM33qxtoJJxUAMqICQEZUAMiICgAZUQEgIyoAZEQFgIyoAJARFQAyogJARlQAyLy2bTfduJU0ueEz+dlv3Fjb9v588nd4427VNtv+fz7hpAJARlQAyIgKABlRASAjKgBkRAWAjKgAkBEVADKiAkBGVADIiAoAmXXbX/zsxr0yfrbtN2g/7WdP/ewVJxUAMqICQEZUAMiICgAZUQEgIyoAZEQFgIyoAJARFQAyogJARlQAyHy9+wb+9Ml7Uyc7P9s2u7btMp3Y9h1WG1DV37lxb2rbjta2ZzrJSQWAjKgAkBEVADKiAkBGVADIiAoAGVEBICMqAGREBYCMqACQERUAMuu2v05s27o5sW2Pa9s20VM33ybf1epaNz5Tu157OKkAkBEVADKiAkBGVADIiAoAGVEBICMqAGREBYCMqACQERUAMqICQObK7a8Tn7w7dOLGe65Mbjdt23e6cddr2/tTPa8bd71OOKkAkBEVADKiAkBGVADIiAoAGVEBICMqAGREBYCMqACQERUAMqICQOax21/8rNqAqvaLbtzIOjH5/ZzYtus1eT/bnkVl24aYkwoAGVEBICMqAGREBYCMqACQERUAMqICQEZUAMiICgAZUQEgIyoAZGx/XWbbdtPkZld1rW33fKL6XDbWfvbU3bNJTioAZEQFgIyoAJARFQAyogJARlQAyIgKABlRASAjKgBkRAWAjKgAkHns9tfkftGkbVtAk9/z5FbStk2qyiffz+R23Iltv+WKkwoAGVEBICMqAGREBYCMqACQERUAMqICQEZUAMiICgAZUQEgIyoAZK7c/nrqZs6kbZtLk6rPPrkBNXnP276fao9rctdr23c4yUkFgIyoAJARFQAyogJARlQAyIgKABlRASAjKgBkRAWAjKgAkBEVADKvyQ0oAJ7NSQWAjKgAkBEVADKiAkBGVADIiAoAGVEBICMqAGREBYCMqACQERUAMqICQEZUAMiICgAZUQEgIyoAZEQFgIyoAJARFQAyogJARlQAyIgKABlRASAjKgBkRAWAjKgAkBEVADKiAkBGVADIiAoAGVEBICMqAGREBYCMqACQERUAMqICQEZUAMiICgAZUQEgIyoAZEQFgIyoAJARFQAyogJARlQAyIgKABlRASDzHyhj62Cp9piXAAAAAElFTkSuQmCC" alt="QR ทำความรู้จัก FORA 6 Connect"&gt;
-      &lt;span&gt;ทำความรู้จัก FORA 6 Connect&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class="brand"&gt;FORA&lt;span&gt;®&lt;/span&gt; ForaCare&lt;/div&gt;
-    &lt;div class="subbrand"&gt;เอกสารภายใน ใช้ภายในบริษัทเท่านั้น&lt;/div&gt;
-    &lt;div class="title"&gt;ขั้นตอนแจกเครื่อง FORA 6 Connect&lt;br&gt;และการรับค่าคอมมิชชั่น&lt;/div&gt;
-    &lt;div class="subtitle"&gt;แนวทางปฏิบัติสำหรับการแจกเครื่องตรวจน้ำตาล/ยูริก/ไขมัน พร้อมระบบอ้างอิงเพื่อรับค่าคอมมิชชั่นจากยอดซื้อครั้งแรกของลูกค้า&lt;/div&gt;
-  &lt;/div&gt;
+  <div class="header">
+    <div class="header-qr">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAhwAAAIcCAIAAAAynOArAAAL3ElEQVR4nO3cQW7jSBBFwdHA97+yZ98LT6H9kMqiItYNkxKpfqjNf31/f/8DAIV/330DADyHqACQERUAMqICQEZUAMiICgAZUQEgIyoAZEQFgIyoAJARFQAyogJARlQAyIgKABlRASAjKgBkRAWAjKgAkBEVADKiAkBGVADIiAoAGVEBICMqAGREBYCMqACQERUAMqICQEZUAMiICgAZUQEgIyoAZEQFgIyoAJARFQAyogJARlQAyIgKABlRASAjKgBkRAWAjKgAkBEVADKiAkBGVADIiAoAGVEBIPP17hv40+v1evctvM339/f//ptt38/kPZ9c60Yn30/1PVff4eS1Tmz7XUza9rtwUgEgIyoAZEQFgIyoAJARFQAyogJARlQAyIgKABlRASAjKgBkRAWAzLrtrxPbtm5O3Lh/dXLPT91cmnxek7te1d+5cUPsk//fmOSkAkBGVADIiAoAGVEBICMqAGREBYCMqACQERUAMqICQEZUAMiICgCZK7e/Tkxu5mzbFNq2p1Q9ixv3uE5M/p3Jz3Xixt9OZdtnrzipAJARFQAyogJARlQAyIgKABlRASAjKgBkRAWAjKgAkBEVADKiAkDmsdtfn2zbvtOJG7e2qmtNbkBN7qedXGvb98PvOakAkBEVADKiAkBGVADIiAoAGVEBICMqAGREBYCMqACQERUAMqICQMb2F78yud00uQ92497U5LOorrVtg47fc1IBICMqAGREBYCMqACQERUAMqICQEZUAMiICgAZUQEgIyoAZEQFgMxjt79u3G6qTO4yTf6dEzfuTd14P5PPa9K2+7mRkwoAGVEBICMqAGREBYCMqACQERUAMqICQEZUAMiICgAZUQEgIyoAZK7c/tq2lTRp2x6Xv+PvbPg7Jz75/41JTioAZEQFgIyoAJARFQAyogJARlQAyIgKABlRASAjKgBkRAWAjKgAkHlVuzrMqPaLnrqntO19tpH1e9ueKT9zUgEgIyoAZEQFgIyoAJARFQAyogJARlQAyIgKABlRASAjKgBkRAWAzNe7b+BPk9tW26518ncmP1dl2z1v+35OTO56Tb7P1bOY3EabdOPnclIBICMqAGREBYCMqACQERUAMqICQEZUAMiICgAZUQEgIyoAZEQFgMxr227Mtj2u6lqVyd2qyb2pyrb3+cS2fadt22jb3sNtO2zbOKkAkBEVADKiAkBGVADIiAoAGVEBICMqAGREBYCMqACQERUAMqICQObr3TfwN6o9nGofbNum0LadqMkdtsn72bbLVN3z5PPaZttnv/E9dFIBICMqAGREBYCMqACQERUAMqICQEZUAMiICgAZUQEgIyoAZEQFgMy67a9tu1WVp24KTT6v6lrbdsa2vRuVbc+r8tTtuIqTCgAZUQEgIyoAZEQFgIyoAJARFQAyogJARlQAyIgKABlRASAjKgBkXtv2Z7bt/JywBfQ81Xs4uX+17T2c/A63XWvbPU9yUgEgIyoAZEQFgIyoAJARFQAyogJARlQAyIgKABlRASAjKgBkRAWAzLrtr222bQpNsoP0e0/9fibf1clneuNvcBsnFQAyogJARlQAyIgKABlRASAjKgBkRAWAjKgAkBEVADKiAkBGVADIfL37Bv7Gth2kT97I2rZNtO17nnTjrteJp77zJ5+rep8nOakAkBEVADKiAkBGVADIiAoAGVEBICMqAGREBYCMqACQERUAMqICQObK7a9tWzcntu2MVSa3ibZ99hu32rZto01ea/Jd3fY9T3JSASAjKgBkRAWAjKgAkBEVADKiAkBGVADIiAoAGVEBICMqAGREBYDM68YdrRPbdn5OTD6LbZtC23aQnroBVV1r2/M6se33Xtn2f7iTCgAZUQEgIyoAZEQFgIyoAJARFQAyogJARlQAyIgKABlRASAjKgBkvt59A3+a3Ow6sW3X68YNqEnbNruqa5248Zlu2yKrPvu238UkJxUAMqICQEZUAMiICgAZUQEgIyoAZEQFgIyoAJARFQAyogJARlQAyKzb/qrcuF9UXevEjXtKkzzT3/+dyrY9rm3bg9t+X04qAGREBYCMqACQERUAMqICQEZUAMiICgAZUQEgIyoAZEQFgIyoAJB57PbXiRu3kqq9qepa274f9njqM/U+/8xJBYCMqACQERUAMqICQEZUAMiICgAZUQEgIyoAZEQFgIyoAJARFQAyH739NanaC5rc2prcGftk27bjJnerPvkde+pnd1IBICMqAGREBYCMqACQERUAMqICQEZUAMiICgAZUQEgIyoAZEQFgMy67a+nbhxtu9a2fbDJHaTJd+PGjbXJ+3nqzlh1rcnvp+KkAkBGVADIiAoAGVEBICMqAGREBYCMqACQERUAMqICQEZUAMiICgCZddtfk5s5n7wFtG0frPo7N97zpBs/+7YtssntuG0bhiecVADIiAoAGVEBICMqAGREBYCMqACQERUAMqICQEZUAMiICgAZUQEgs27768SN+0Xb9nmeust04sY9rurvbPtdbNvRqmx7xyY5qQCQERUAMqICQEZUAMiICgAZUQEgIyoAZEQFgIyoAJARFQAyogJAZt3217YdpMlr3XjPkyZ3oiafaeWTv58bN+hObPsNnnBSASAjKgBkRAWAjKgAkBEVADKiAkBGVADIiAoAGVEBICMqAGREBYDMa3LH5sTkRta2z37ixo2jbftF2zbWTnzy5tu2ra3JZ3rj/1FOKgBkRAWAjKgAkBEVADKiAkBGVADIiAoAGVEBICMqAGREBYCMqACQuXL7a9K2naht20SVbZ/9xLb7OTG5rTdp2z1v+39jkpMKABlRASAjKgBkRAWAjKgAkBEVADKiAkBGVADIiAoAGVEBICMqAGS+3n0Df+OT951u3Di60eRG1o1bbSdu/FzVM33qxtoJJxUAMqICQEZUAMiICgAZUQEgIyoAZEQFgIyoAJARFQAyogJARlQAyLy2bTfduJU0ueEz+dlv3Fjb9v588nd4427VNtv+fz7hpAJARlQAyIgKABlRASAjKgBkRAWAjKgAkBEVADKiAkBGVADIiAoAmXXbX/zsxr0yfrbtN2g/7WdP/ewVJxUAMqICQEZUAMiICgAZUQEgIyoAZEQFgIyoAJARFQAyogJARlQAyHy9+wb+9Ml7Uyc7P9s2u7btMp3Y9h1WG1DV37lxb2rbjta2ZzrJSQWAjKgAkBEVADKiAkBGVADIiAoAGVEBICMqAGREBYCMqACQERUAMuu2v05s27o5sW2Pa9s20VM33ybf1epaNz5Tu157OKkAkBEVADKiAkBGVADIiAoAGVEBICMqAGREBYCMqACQERUAMqICQObK7a8Tn7w7dOLGe65Mbjdt23e6cddr2/tTPa8bd71OOKkAkBEVADKiAkBGVADIiAoAGVEBICMqAGREBYCMqACQERUAMqICQOax21/8rNqAqvaLbtzIOjH5/ZzYtus1eT/bnkVl24aYkwoAGVEBICMqAGREBYCMqACQERUAMqICQEZUAMiICgAZUQEgIyoAZGx/XWbbdtPkZld1rW33fKL6XDbWfvbU3bNJTioAZEQFgIyoAJARFQAyogJARlQAyIgKABlRASAjKgBkRAWAjKgAkHns9tfkftGkbVtAk9/z5FbStk2qyiffz+R23Iltv+WKkwoAGVEBICMqAGREBYCMqACQERUAMqICQEZUAMiICgAZUQEgIyoAZK7c/nrqZs6kbZtLk6rPPrkBNXnP276fao9rctdr23c4yUkFgIyoAJARFQAyogJARlQAyIgKABlRASAjKgBkRAWAjKgAkBEVADKvyQ0oAJ7NSQWAjKgAkBEVADKiAkBGVADIiAoAGVEBICMqAGREBYCMqACQERUAMqICQEZUAMiICgAZUQEgIyoAZEQFgIyoAJARFQAyogJARlQAyIgKABlRASAjKgBkRAWAjKgAkBEVADKiAkBGVADIiAoAGVEBICMqAGREBYCMqACQERUAMqICQEZUAMiICgAZUQEgIyoAZEQFgIyoAJARFQAyogJARlQAyIgKABlRASDzHyhj62Cp9piXAAAAAElFTkSuQmCC" alt="QR ทำความรู้จัก FORA 6 Connect">
+      <span>ทำความรู้จัก FORA 6 Connect</span>
+    </div>
+    <div class="brand">FORA<span>®</span> ForaCare</div>
+    <div class="subbrand">เอกสารภายใน ใช้ภายในบริษัทเท่านั้น</div>
+    <div class="title">ขั้นตอนแจกเครื่อง FORA 6 Connect<br>และการรับค่าคอมมิชชั่น</div>
+    <div class="subtitle">แนวทางปฏิบัติสำหรับการแจกเครื่องตรวจน้ำตาล/ยูริก/ไขมัน พร้อมระบบอ้างอิงเพื่อรับค่าคอมมิชชั่นจากยอดซื้อครั้งแรกของลูกค้า</div>
+  </div>
 
-  &lt;div class="content"&gt;
-    &lt;div class="flow"&gt;
+  <div class="content">
+    <div class="flow">
 
-      &lt;div class="step"&gt;
-        &lt;div class="num"&gt;1&lt;/div&gt;
-        &lt;div class="card"&gt;
-          &lt;h3&gt;คัดเลือกลูกค้าเป้าหมาย&lt;/h3&gt;
-          &lt;p&gt;มองหาลูกค้าที่มีแนวโน้มสนใจดูแลสุขภาพ เช่น กลุ่มเสี่ยงเบาหวาน เสี่ยงโรคเกาท์ หรือไขมันในเลือดสูง ที่น่าจะได้ประโยชน์จากการมีเครื่องตรวจไว้ใช้เองที่บ้าน&lt;/p&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
+      <div class="step">
+        <div class="num">1</div>
+        <div class="card">
+          <h3>คัดเลือกลูกค้าเป้าหมาย</h3>
+          <p>มองหาลูกค้าที่มีแนวโน้มสนใจดูแลสุขภาพ เช่น กลุ่มเสี่ยงเบาหวาน เสี่ยงโรคเกาท์ หรือไขมันในเลือดสูง ที่น่าจะได้ประโยชน์จากการมีเครื่องตรวจไว้ใช้เองที่บ้าน</p>
+        </div>
+      </div>
 
-      &lt;div class="step"&gt;
-        &lt;div class="num"&gt;2&lt;/div&gt;
-        &lt;div class="card"&gt;
-          &lt;h3&gt;แอดไลน์ @foracare แจ้งข้อมูลกับแอดมิน&lt;/h3&gt;
-          &lt;div class="card-flex"&gt;
-            &lt;div class="mini-qr"&gt;
-              &lt;img src="data:image/png;base64,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"&gt;
+      <div class="step">
+        <div class="num">2</div>
+        <div class="card">
+          <h3>แอดไลน์ @foracare แจ้งข้อมูลกับแอดมิน</h3>
+          <div class="card-flex">
+            <div class="mini-qr">
+              <img src="data:image/png;base64,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" alt="QR แอดไลน์ @foracare">
+              <span>สแกนเพื่อแอดไลน์ @foracare</span>
+            </div>
+            <p>แอดไลน์ <b>@foracare</b> แล้วแจ้งชื่อสกุลพนักงาน หน่วยงานที่สังกัด และจำนวนเครื่อง FORA 6 ที่ต้องการแจกให้กับลูกค้าเป้าหมาย เช่น <i>"สมหญิง จริงใจ ฝ่ายบุคคล จำนวน 2 เครื่อง"</i> จากนั้นแอดมินจะแจ้ง Reference Code ของพนักงาน และนัดหมายเพื่อรับเครื่องต่อไป</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="num">3</div>
+        <div class="card">
+          <h3>แจกเครื่อง FORA 6 Connect ฟรี</h3>
+          <p>มอบเครื่องตรวจ FORA 6 Connect ให้ลูกค้าโดยไม่มีค่าใช้จ่าย</p>
+          <span class="tag">ไม่มีค่าใช้จ่ายสำหรับลูกค้า</span>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="num">4</div>
+        <div class="card">
+          <h3>แจ้ง Reference Code ให้ลูกค้าเก็บไว้</h3>
+          <p>แจ้งรหัสอ้างอิง (Reference Code) รูปแบบ <b>Fora6_XXXX</b> ให้ลูกค้าจดหรือเก็บไว้ เพื่อใช้แจ้งตอนสั่งซื้อแถบตรวจเพิ่มในอนาคต</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="num">5</div>
+        <div class="card">
+          <h3>ลูกค้าแอดไลน์สั่งซื้อแถบตรวจเพิ่ม</h3>
+          <p>ลูกค้าแอดไลน์ทางการ <b>@foracare</b> และแจ้ง Reference Code เช่น <b>Fora6_XXXX</b> พร้อมแจ้งรายการแถบตรวจที่ต้องการสั่งซื้อ</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="num">6</div>
+        <div class="card">
+          <h3>ลูกค้าได้รับส่วนลดทันที</h3>
+          <p>คำสั่งซื้อแรกที่แจ้ง Reference Code จะได้รับส่วนลดตามที่แสดงด้านล่างนี้ เมื่อมียอดซื้อขั้นต่ำ 500 บาทขึ้นไป</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="num">7</div>
+        <div class="card">
+          <h3>พนักงานรับค่าคอมมิชชั่นอัตโนมัติ</h3>
+          <p>ระบบตรวจสอบ Reference Code จากคำสั่งซื้อแรกของลูกค้า และคำนวณค่าคอมมิชชั่นให้พนักงานเจ้าของรหัสโดยอัตโนมัติ โดยจะโอนเข้าบัญชีเงินเดือนโดยการเงิน และนับเป็นเงินได้ของพนักงาน (ตัดยอดขายทุกสิ้นเดือน และทำจ่ายค่าคอมภายใน 2 สัปดาห์หลังสิ้นเดือน โดยจะนับเฉพาะยอดสั่งซื้อครั้งแรกของลูกค้าแต่ละราย)</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="highlight-row">
+      <div class="hbox b1">
+        <div class="tier-title">ส่วนลดลูกค้า (คำสั่งซื้อแรก)</div>
+        <div class="tier-list">
+          <div class="tier-row">ส่วนลด <span class="num">100</span> บาท สำหรับยอดสั่งซื้อขั้นต่ำ <span class="num">500</span> บาท</div>
+          <div class="tier-row">ส่วนลด <span class="num">220</span> บาท สำหรับยอดสั่งซื้อขั้นต่ำ <span class="num">1,000</span> บาท</div>
+          <div class="tier-row">ส่วนลด <span class="num">350</span> บาท สำหรับยอดสั่งซื้อขั้นต่ำ <span class="num">1,500</span> บาท</div>
+        </div>
+      </div>
+      <div class="hbox b2">
+        <div class="big">10%</div>
+        <div class="lab">ค่าคอมมิชชั่นเซลล์</div>
+        <div class="sub">จากยอดซื้อครั้งแรกของลูกค้าหลังหักส่วนลดแล้ว</div>
+      </div>
+    </div>
+
+    <div class="refbox">
+      <div class="ricon">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M4 4h16v16H4z" stroke="#fff" stroke-width="1.6" fill="none"/><path d="M8 9h8M8 13h5" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </div>
+      <div>
+        <b>อย่าลืม!</b>
+        <p>ทุกครั้งที่แจกเครื่อง ให้พนักงานแจ้ง Reference Code รูปแบบ <b>Fora6_XXXX</b> แก่ลูกค้าเสมอ — หากลูกค้าไม่แจ้งรหัสตอนสั่งซื้อ ระบบจะไม่สามารถคำนวณค่าคอมมิชชั่นให้พนักงานได้</p>
+      </div>
+    </div>
+
+    <div class="qr-section">
+      <div class="qrbox">
+        <img src="data:image/png;base64,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" alt="QR วิธีสั่งซื้อแถบตรวจเพิ่ม">
+      </div>
+      <div class="qtext">
+        <h3>ให้ลูกค้าสแกน QR นี้</h3>
+        <p>แจ้งให้ลูกค้าสแกน QR นี้ เพื่อดูวิธีการสั่งซื้อแถบตรวจเพิ่มด้วยตนเอง (แอดไลน์ + แจ้ง Reference Code + ราคาแถบตรวจ)</p>
+      </div>
+    </div>
+
+    <div class="pricebar">
+      <h4>ราคาแถบตรวจ (แจ้งลูกค้าได้ทันที)</h4>
+      <table class="pricetable">
+        <tr><th>รายการ</th><th>ราคา/กล่อง</th><th>จำนวน/กล่อง</th></tr>
+        <tr>
+          <td class="name"><span class="dot glu"></span>Glucose (น้ำตาล)</td>
+          <td class="price">380 บาท</td>
+          <td>25 แผ่น/กล่อง</td>
+        </tr>
+        <tr>
+          <td class="name"><span class="dot uric"></span>Uric Acid (กรดยูริก)</td>
+          <td class="price">540 บาท</td>
+          <td>10 แผ่น/กล่อง</td>
+        </tr>
+        <tr>
+          <td class="name"><span class="dot chol"></span>Cholesterol (ไขมัน)</td>
+          <td class="price">970 บาท</td>
+          <td>10 แผ่น/กล่อง</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="footer">
+      <div>ติดต่อสอบถามเพิ่มเติม: LINE OA <b>@foracare</b></div>
+      <div>โปรโมชั่นส่วนลดแรกเข้า สิ้นสุด <b>31 ธ.ค. 2569 (2026)</b></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
